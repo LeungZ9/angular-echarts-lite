@@ -9,22 +9,22 @@ import echarts from 'echarts';
  */
 class Directive {
     constructor() {
-        /** @private  {boolean}*/
-        this.replace = true;
-        /** @private  {string}*/
-        this.restrict = 'E';
-        /** @private  {scope}*/
-        this.scope = {
-            config: '=',
-            instance: '=?',
-            theme: '=?'
+        /** @return {directive properties} */
+        return {
+            replace: true,
+            restrict: 'E',
+            scope: {
+                config: '=',
+                instance: '=?',
+                theme: '=?'
+            },
+            template: '<div></div>',
+            link: this.link_
         };
-        /** @private  {string}*/
-        this.template = '<div></div>';
     }
 
     /** @private  */
-    link(scope, element, attr) {
+    link_(scope, element, attr) {
         /**
          * @param {echartsOptions} options
          * @private
@@ -57,10 +57,9 @@ class Directive {
                 return scope.theme;
             }, function (newValue, oldValue) {
                 if (newValue !== oldValue) {
-                    const options = chart.getOption();
                     chart.dispose();
                     chart = echarts.init(element[0], newValue);
-                    chart.setOption(options);
+                    chart.setOption(scope.config);
                 }
             }, true);
         }
@@ -77,7 +76,7 @@ class Directive {
     }
 
     /** @return {directive } */
-    static get factory() {
+    static factory() {
         return new Directive();
     }
 }

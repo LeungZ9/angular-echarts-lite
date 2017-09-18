@@ -1,13 +1,13 @@
 {
   "name": "angular-echarts-lite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "angular directive for baidu echarts",
   "scripts": {
     "build": "mkdirp dist && webpack --progress --colors",
     "build:min": "mkdirp dist && webpack --progress --colors",
     "dist": "npm run clean && npm run build && npm run build:min",
     "clean": "del-cli dist/**",
-    "dev": "npm run clean && webpack-dev-server --progress"
+    "dev": "npm run clean && webpack-dev-server --progress --open"
   },
   "keywords": [
     "angular",
