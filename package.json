@@ -1,6 +1,6 @@
 {
   "name": "angular-echarts-lite",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "angular directive for baidu echarts",
   "scripts": {
     "build": "mkdirp dist && webpack --progress --colors",
@@ -9,6 +9,10 @@
     "clean": "del-cli dist/**",
     "dev": "npm run clean && webpack-dev-server --progress --open"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LeungZ9/angular-echarts-lite.git"
+  },
   "keywords": [
     "angular",
     "baidu",
@@ -16,6 +20,10 @@
   ],
   "author": "LeungZ",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeungZ9/angular-echarts-lite/issues"
+  },
+  "homepage": "https://github.com/LeungZ9/angular-echarts-lite",
   "dependencies": {
     "angular": "^1.6.1",
     "echarts": "^3.2.2"
