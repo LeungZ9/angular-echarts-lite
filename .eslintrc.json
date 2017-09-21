@@ -1,13 +1,11 @@
 {
     "env": {
-        "browser": true,
-        "es6": true
+        "browser": true
     },
-    "extends": ["eslint:recommended", "plugin:angular/johnpapa"],
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module"
-    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:angular/johnpapa"
+    ],
     "rules": {
         "indent": [
             "error",
