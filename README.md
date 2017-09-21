@@ -2,7 +2,7 @@
 
 AngularJS 1.2+ directive for baidu echarts v3
 
-**[Demo]()** (updated with every release)
+**[Demo](https://leungz9.github.io/angular-echarts-lite/)** (updated with every release)
 
 ## Quick start
 
