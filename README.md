@@ -93,7 +93,7 @@ You can find all possible attribute for the directive in the table below:
 Attribute  | Usage
 ---        | ---
 config     | `Object`, set the configuration of chart by using [echarts options](https://ecomfe.github.io/echarts-doc/public/en/option.html)<br>Here is some additional configuration:<br>**forceClear** `boolean`, whether to remove chart before update<br>**notMerge** `boolean`, whether not to merge with previous<br>**errorMsg** `Object`, configuration item while error, [more detail](https://ecomfe.github.io/echarts-doc/public/en/api.html#echartsInstance.showLoading)
-theme      | `Object|string`,  set the theme of chart
+theme      | `Object` or `string`,  set the theme of chart
 instance   | Bind a function to get chart instance
 unwatch    | Cancel scope watch for `config` and `theme` attribute
 
