@@ -1,2 +1,2 @@
 # angular-echarts-lite
-angular directive for baidu echarts
+Demo for angular echarts lite
