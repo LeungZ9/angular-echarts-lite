@@ -52,7 +52,12 @@ angular.module('demo', ['angular-echarts-lite'])
         vm.configTxtChange = function(){
             $timeout.cancel(timeout);
             timeout = $timeout((function(){
-                vm.config = angular.fromJson(vm.configTxt);
+                try {
+                    vm.config = angular.fromJson(vm.configTxt);
+                } catch(e) {
+                    alert(e);
+                }
+                
                 // If not register scope watcher, update chart via API on chart instance
                 if(vm.unwatch){
                     if(!chartInst){

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "demo for angular-echarts-lite",
   "scripts": {
-    "build": "npm run clean && mkdirp dist && webpack -p --progress --colors",
-    "clean": "del-cli dist/**"
+    "build": "npm run clean && webpack -p --progress --colors",
+    "clean": "del-cli demo.min.js"
   },
   "author": "LeungZ",
   "license": "MIT",
@@ -16,7 +16,6 @@
     "eslint-loader": "^1.9.0",
     "eslint-plugin-angular": "^3.1.0",
     "webpack": "^3.1.0",
-    "del-cli": "^1.0.0",
-    "mkdirp": "^0.5.1"
+    "del-cli": "^1.0.0"
   }
 }

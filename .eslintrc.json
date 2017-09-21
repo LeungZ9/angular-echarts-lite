@@ -6,6 +6,10 @@
         "eslint:recommended",
         "plugin:angular/johnpapa"
     ],
+    "parserOptions": {
+        "ecmaVersion": 5,
+        "sourceType": "module"
+    },
     "rules": {
         "indent": [
             "error",
