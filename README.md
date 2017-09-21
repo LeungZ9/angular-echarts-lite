@@ -1,6 +1,6 @@
 # Angular Echarts lite
 
-AngularJS directive for baidu echarts v3
+AngularJS 1.2+ directive for baidu echarts v3
 
 **[Demo]()** (updated with every release)
 

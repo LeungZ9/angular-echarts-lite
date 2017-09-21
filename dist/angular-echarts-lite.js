@@ -144,8 +144,7 @@ var Directive = function () {
                 }
             }
 
-            var dom = element[0],
-                chart = _echarts2.default.init(dom, scope.theme);
+            var chart = _echarts2.default.init(element[0], scope.theme);
             setOptions(scope.config);
 
             // Check for attribute "unwatch" whether to register scope watch
