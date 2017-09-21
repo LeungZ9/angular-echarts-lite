@@ -1,5 +1,4 @@
-import angular from "angular";
-import "angular-echarts-lite";
-import controller from "demo.controller"
+import angular from 'angular';
+import 'angular-echarts-lite';
 
-angular.module("demo", ['angular-echarts-lite']).controller("DemoController", controller);
+angular.module('demo', ['angular-echarts-lite']);
