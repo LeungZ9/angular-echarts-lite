@@ -11,14 +11,12 @@ class Directive {
     constructor() {
         /** @return {directive properties} */
         return {
-            replace: true,
-            restrict: 'E',
+            restrict: 'A',
             scope: {
                 config: '=',
                 instance: '=?',
                 theme: '=?'
             },
-            template: '<div></div>',
             link: this.link_
         };
     }

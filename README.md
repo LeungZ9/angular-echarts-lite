@@ -68,7 +68,7 @@ angular.module("demo", ['angular-echarts-lite'])
 Add this markup into page
 ```html
 <div ng-controller="DemoController as vm">
-    <lz-chart config="vm.config" style="width:480px;height:480px"></lz-chart>
+    <div lz-chart config="vm.config" style="width:480px;height:480px"></div>
 </div>
 ```
 
@@ -85,7 +85,7 @@ require('angular-echarts-lite')
 ## Usage
 
 ```html
-<lz-chart config theme instance unwatch></lz-chart>
+<div lz-chart  config theme instance unwatch></div>
 ```
 
 You can find all possible attribute for the directive in the table below:
