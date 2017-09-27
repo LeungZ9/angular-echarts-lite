@@ -65,7 +65,7 @@ angular.module('demo', ['angular-echarts-lite'])
                     }
                     chartInst.setOption(vm.config);
                 }
-            }).bind(vm), 300);
+            }), 300);
         };
 
         // If not register scope watcher, update chart via API on chart instance
@@ -75,5 +75,11 @@ angular.module('demo', ['angular-echarts-lite'])
                 chartInst = echarts.init(chartInst.getDom(), vm.theme);
                 chartInst.setOption(vm.config);
             }
+        };
+
+        vm.chartInit = function () {
+            $timeout((function () {
+                chartInst = vm.chartInst();
+            }), 0, false);
         };
     }]);

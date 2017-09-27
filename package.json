@@ -1,6 +1,6 @@
 {
   "name": "demo4angular-echarts-lite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "demo for angular-echarts-lite",
   "scripts": {
     "build": "npm run clean && webpack -p --progress --colors",
@@ -9,7 +9,7 @@
   "author": "LeungZ",
   "license": "MIT",
   "dependencies": {
-    "angular-echarts-lite": "^1.0.4"
+    "angular-echarts-lite": "^1.0.6"
   },
   "devDependencies": {
     "eslint": "^4.2.0",
