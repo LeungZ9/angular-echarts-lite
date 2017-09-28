@@ -1,6 +1,6 @@
 {
   "name": "angular-echarts-lite",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "angular directive for baidu echarts",
   "scripts": {
     "build": "mkdirp dist && webpack --progress --colors",
