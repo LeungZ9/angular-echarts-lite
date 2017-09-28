@@ -110,12 +110,14 @@ var Directive = function () {
 
         /** @return {directive properties} */
         return {
-            restrict: 'A',
+            replace: true,
+            restrict: 'E',
             scope: {
                 config: '=',
                 instance: '=?',
                 theme: '=?'
             },
+            template: '<div></div>',
             link: this.link_
         };
     }
