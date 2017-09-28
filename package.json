@@ -9,7 +9,7 @@
   "author": "LeungZ",
   "license": "MIT",
   "dependencies": {
-    "angular-echarts-lite": "^1.0.6"
+    "angular-echarts-lite": "^1.0.8"
   },
   "devDependencies": {
     "eslint": "^4.2.0",
