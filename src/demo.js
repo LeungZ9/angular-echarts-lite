@@ -48,6 +48,7 @@ angular.module('demo', ['angular-echarts-lite'])
             ]
         };
         vm.configTxt = angular.toJson(vm.config, true);
+        vm.unwatchDesc = '\'unwatch\' just takes effort once on directive init. While on unwatch, it will skip dirty checking for \'theme\' and \'config\'. Instead, you must update chart via chart instance api by yourself';
 
         vm.configTxtChange = function(){
             $timeout.cancel(timeout);

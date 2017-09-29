@@ -58,7 +58,7 @@
                 </select> &emsp;
                 <label for="echarts-unwatch">Unwatch</label>
                 <input type="checkbox" ng-model="vm.unwatch" id="echarts-unwatch" />
-                <div class="well" ng-show="vm.unwatch">'unwatch' just takes effort once on directive init. While on unwatch, it will skip dirty checking for 'theme' and 'config'. Instead, you must update chart via chart instance api by yourself</div>
+                <div class="well" ng-show="vm.unwatch" ng-bind="vm.unwatchDesc"></div>
             </div>
             <textarea id="echarts-options" ng-change="vm.configTxtChange()" ng-model="vm.configTxt" placeholder="echarts options..."></textarea>
         </div>
