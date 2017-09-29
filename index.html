@@ -22,6 +22,13 @@
             display: flex;
             flex-direction: column;
         }
+        .main-content .echarts-content .well {
+            background-color: #f5f5f5;
+            color: #8a6d3b;
+            padding: 5px 5px;
+            font-size: 12px;
+            margin: 8px 0 0;
+        }
         .main-content .echarts-content textarea {
             box-sizing: border-box;
             width: 100%;
@@ -49,8 +56,9 @@
                     <option value="dark">Dark</option>
                     <option value="macarons">Macarons</option>
                 </select> &emsp;
-                <label for="echarts-unwatch">Unwatch (set on initialization)</label>
+                <label for="echarts-unwatch">Unwatch</label>
                 <input type="checkbox" ng-model="vm.unwatch" id="echarts-unwatch" />
+                <div class="well" ng-show="vm.unwatch">'unwatch' just takes effort once on directive init. While on unwatch, it will skip dirty checking for 'theme' and 'config'. Instead, you must update chart via chart instance api by yourself</div>
             </div>
             <textarea id="echarts-options" ng-change="vm.configTxtChange()" ng-model="vm.configTxt" placeholder="echarts options..."></textarea>
         </div>
