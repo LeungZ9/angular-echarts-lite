@@ -80,6 +80,9 @@ You can obtain angular echarts lite directly in project via webpack
 
 ```js
 require('angular-echarts-lite')
+
+//To add dependency into your module
+angular.module("ur-module", ['angular-echarts-lite'])
 ```
 
 ## Usage
