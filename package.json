@@ -9,7 +9,7 @@
   "author": "LeungZ",
   "license": "MIT",
   "dependencies": {
-    "angular-echarts-lite": "^1.0.8"
+    "angular-echarts-lite": "^1.1.0"
   },
   "devDependencies": {
     "del-cli": "^1.0.0",
