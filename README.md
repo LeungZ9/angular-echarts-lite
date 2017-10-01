@@ -85,7 +85,7 @@ require('angular-echarts-lite')
 ## Usage
 
 ```html
-<lz-chart  config theme instance unwatch></lz-chart>
+<lz-chart  config= theme=? instance=? unwatch></lz-chart>
 ```
 
 You can find all possible attribute for the directive in the table below:
