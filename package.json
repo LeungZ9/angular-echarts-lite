@@ -12,10 +12,11 @@
     "angular-echarts-lite": "^1.0.8"
   },
   "devDependencies": {
+    "del-cli": "^1.0.0",
     "eslint": "^4.2.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-angular": "^3.1.0",
-    "webpack": "^3.1.0",
-    "del-cli": "^1.0.0"
+    "html-loader": "^0.5.1",
+    "webpack": "^3.1.0"
   }
 }

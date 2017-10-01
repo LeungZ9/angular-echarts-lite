@@ -4,12 +4,16 @@ import 'echarts/theme/vintage';
 import 'echarts/theme/dark';
 import 'echarts/theme/macarons';
 import 'angular-echarts-lite';
+import temp from './demo.html';
 
 angular.module('demo', ['angular-echarts-lite'])
+    .run(['$templateCache', function ($templateCache) {
+        $templateCache.put('DemoTemplate', temp);
+    }])
     /*eslint angular/file-name: [off]*/
     .controller('DemoController', ['$timeout', function ($timeout) {
         var timeout, chartInst, vm = this;
-        
+
         vm.config = { //Init echarts option
             title: {
                 text: '对数轴示例',
@@ -50,18 +54,18 @@ angular.module('demo', ['angular-echarts-lite'])
         vm.configTxt = angular.toJson(vm.config, true);
         vm.unwatchDesc = '\'unwatch\' just takes effort once on directive init. While on unwatch, it will skip dirty checking for \'theme\' and \'config\'. Instead, you must update chart via chart instance api by yourself';
 
-        vm.configTxtChange = function(){
+        vm.configTxtChange = function () {
             $timeout.cancel(timeout);
-            timeout = $timeout((function(){
+            timeout = $timeout((function () {
                 try {
                     vm.config = angular.fromJson(vm.configTxt);
-                } catch(e) {
+                } catch (e) {
                     alert(e);
                 }
-                
+
                 // If not register scope watcher, update chart via API on chart instance
-                if(vm.unwatch){
-                    if(!chartInst){
+                if (vm.unwatch) {
+                    if (!chartInst) {
                         chartInst = vm.chartInst();
                     }
                     chartInst.setOption(vm.config);
@@ -70,8 +74,8 @@ angular.module('demo', ['angular-echarts-lite'])
         };
 
         // If not register scope watcher, update chart via API on chart instance
-        vm.themeChange = function(){
-            if(vm.unwatch){
+        vm.themeChange = function () {
+            if (vm.unwatch) {
                 chartInst.dispose();
                 chartInst = echarts.init(chartInst.getDom(), vm.theme);
                 chartInst.setOption(vm.config);

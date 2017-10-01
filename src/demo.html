@@ -1,0 +1,21 @@
+<div class="main-content" ng-controller="DemoController as vm">
+    <div class="echarts-content">
+        <div>
+            <label for="echarts-theme">Theme </label>
+            <select id="echarts-theme" ng-change="vm.themeChange()" ng-model="vm.theme">
+                <option value="">Default</option>
+                <option value="vintage">Vintage</option>
+                <option value="dark">Dark</option>
+                <option value="macarons">Macarons</option>
+            </select> &emsp;
+            <label for="echarts-unwatch">Unwatch</label>
+            <input type="checkbox" ng-model="vm.unwatch" id="echarts-unwatch" />
+            <div class="well" ng-show="vm.unwatch" ng-bind="vm.unwatchDesc"></div>
+        </div>
+        <textarea id="echarts-options" ng-change="vm.configTxtChange()" ng-model="vm.configTxt" placeholder="echarts options..."></textarea>
+    </div>
+    <div class="chart-content" ng-switch="vm.unwatch">
+        <lz-chart ng-switch-default config="vm.config" class="chart" theme="vm.theme"></lz-chart>
+        <lz-chart ng-switch-when="true" unwatch config="vm.config" class="chart" theme="vm.theme" instance="vm.chartInst" ng-init="vm.chartInit()"></lz-chart>
+    </div>
+</div>
