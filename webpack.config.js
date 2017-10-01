@@ -7,13 +7,13 @@ const path = require('path');
 
 module.exports = {
     context: path.resolve('./src'),
-    entry: path.resolve("./src/demo"),
+    entry: path.resolve('./src/demo'),
     output: {
         filename: 'demo.min.js'
     },
     externals: {
-        angular: "angular",
-        echarts: "echarts"
+        angular: 'angular',
+        echarts: 'echarts'
     },
     devServer: {
         disableHostCheck: true,
@@ -25,14 +25,14 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: [{
-                    loader: "eslint-loader"
+                    loader: 'eslint-loader'
                 }]
             },
             {
                 test: /\.html$/,
                 exclude: /node_modules/,
                 use: [{
-                    loader: "html-loader"
+                    loader: 'html-loader'
                 }]
             }
         ]
