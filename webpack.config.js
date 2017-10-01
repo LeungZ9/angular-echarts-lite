@@ -5,20 +5,20 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const IS_DEV = process.env.npm_lifecycle_event === "dev";
-const IS_MIN = process.env.npm_lifecycle_event === "build:min";
+const IS_DEV = process.env.npm_lifecycle_event === 'dev';
+const IS_MIN = process.env.npm_lifecycle_event === 'build:min';
 
 module.exports = {
     context: path.resolve('./src'),
-    entry: path.resolve("./src/angular-echarts-lite"),
+    entry: path.resolve('./src/angular-echarts-lite'),
     output: {
         path: path.resolve('./dist'),
         filename: 'angular-echarts-lite' + (IS_MIN ? '.min.js' : '.js'),
-        libraryTarget: "umd"
+        libraryTarget: 'umd'
     },
     externals: {
-        angular: "angular",
-        echarts: "echarts"
+        angular: 'angular',
+        echarts: 'echarts'
     },
     devServer: {
         disableHostCheck: true,
@@ -31,12 +31,12 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: "babel-loader",
+                        loader: 'babel-loader',
                         options: {
-                            presets: ["es2015"]
+                            presets: ['es2015']
                         }
                     }, {
-                        loader: "eslint-loader"
+                        loader: 'eslint-loader'
                     }
                 ]
             }
@@ -48,6 +48,6 @@ module.exports = {
         })
     ],
     devServer: {
-        contentBase: path.resolve("./demo")
+        contentBase: path.resolve('./demo')
     }
 };
